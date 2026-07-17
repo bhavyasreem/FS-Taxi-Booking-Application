@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi - Driver Partner Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="main-nav"></nav>
+
+    <div class="dashboard-grid">
+        <!-- Sidebar Controls -->
+        <aside class="dashboard-sidebar">
+            <div class="glass-container" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">Driver Partner</h3>
+                
+                <div>
+                    <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">PLATFORM RATING</span>
+                    <div id="driver-rating-val" style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin-top: 0.25rem;">4.8 ★</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="driver-avail-status">Availability Status</label>
+                    <select id="driver-avail-status" class="form-control" style="background-color: var(--bg-dark);">
+                        <option value="Available">Available (Accepting Trips)</option>
+                        <option value="Busy">Busy (On Active Ride)</option>
+                        <option value="Offline">Offline (Unavailable)</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main style="display: flex; flex-direction: column; gap: 2rem;">
+            <div class="glass-container" style="padding: 2rem;">
+                <h2 id="driver-dashboard-title" style="font-size: 2.2rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 2rem;">Driver Console</h2>
+                
+                <!-- Earnings and Trips Stats -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                    <div class="dashboard-card-stat" style="border-color: var(--secondary); background: rgba(16, 185, 129, 0.03);">
+                        <div>
+                            <h4 style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">COMPLETED RIDES</h4>
+                            <span id="stat-driver-completed" class="stat-value" style="color: var(--secondary);">0</span>
+                        </div>
+                        <div style="color: var(--secondary); background: var(--secondary-glow); padding: 0.8rem; border-radius: 12px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card-stat" style="border-color: var(--primary); background: rgba(99, 102, 241, 0.03);">
+                        <div>
+                            <h4 style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">TOTAL EARNINGS</h4>
+                            <span id="stat-driver-earnings" class="stat-value" style="color: var(--primary);">₹0</span>
+                        </div>
+                        <div style="color: var(--primary); background: var(--primary-glow); padding: 0.8rem; border-radius: 12px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assigned Rides Table -->
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.25rem;">Assigned Trip Bookings</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Customer Name</th>
+                                <th>Route Locations</th>
+                                <th>Total Fare</th>
+                                <th>Ride Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assigned-trips-tbody">
+                            <tr>
+                                <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 2rem;">Loading assigned bookings...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

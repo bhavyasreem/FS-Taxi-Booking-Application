@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi - Secure Payment Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="main-nav"></nav>
+
+    <main style="max-width: 550px; margin: 4rem auto; padding: 0 1.5rem;">
+        <div class="glass-container">
+            <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 2rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Payment Checkout</h2>
+            
+            <div style="background: rgba(255, 255, 255, 0.02); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">Booking ID:</span>
+                    <span id="pay-booking-id" style="font-weight: 600;">#000</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">Travel Route:</span>
+                    <span id="pay-route" style="font-weight: 600;">- ➔ -</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-muted);">Assigned Driver:</span>
+                    <span id="pay-driver" style="font-weight: 600;">-</span>
+                </div>
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 0.5rem 0;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 1.1rem;">Total Payable Fare:</span>
+                    <span id="pay-fare" style="font-size: 1.8rem; font-weight: 800; color: var(--secondary);">₹0</span>
+                </div>
+            </div>
+
+            <form id="payForm">
+                <div class="form-group">
+                    <label class="form-label" for="payment_method">Select Payment Method</label>
+                    <select id="payment_method" class="form-control" required>
+                        <option value="UPI">UPI (Google Pay, PhonePe, Paytm)</option>
+                        <option value="Credit Card">Credit Card (Visa, MasterCard, Amex)</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="Wallet">Wallet (Paytm, Mobikwik, Amazon Pay)</option>
+                        <option value="Cash">Cash (Pay to Driver directly)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success" style="width: 100%; margin-top: 1.5rem; padding: 0.9rem;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/><path d="M3 22V2h18v20H3zm4-16h10v12H7V6z"/></svg>
+                    Confirm & Authorize Payment
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

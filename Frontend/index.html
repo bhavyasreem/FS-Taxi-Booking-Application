@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi - Modern Ride Booking Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="main-nav"></nav>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Your Premium Ride, Just a <span>Click</span> Away.</h1>
+            <p>Experience the future of transportation. Book rides instantly, track your drivers in real-time, and make secure digital payments with GoTaxi.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary" id="quick-book-btn">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Book a Ride Now
+                </button>
+                <a href="drivers.html" class="btn btn-secondary">Meet Drivers</a>
+            </div>
+        </div>
+        
+        <div class="glass-container" style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: center; height: auto;">
+            <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Why Choose GoTaxi?</h3>
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="background: var(--primary-glow); padding: 0.75rem; border-radius: 12px; color: var(--primary);">✓</div>
+                <div>
+                    <h4 style="font-weight: 600;">Verified Drivers</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Experienced, professional drivers with vetted background records.</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="background: var(--secondary-glow); padding: 0.75rem; border-radius: 12px; color: var(--secondary);">✓</div>
+                <div>
+                    <h4 style="font-weight: 600;">Transparent Fare</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">No hidden surprises. Fare estimation based on real distances.</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="background: rgba(168, 85, 247, 0.15); padding: 0.75rem; border-radius: 12px; color: var(--accent);">✓</div>
+                <div>
+                    <h4 style="font-weight: 600;">Eco Friendly / Luxury Options</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">From quick bikes and auto options to spacious luxury Sedans and SUVs.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section style="padding: 4rem 5%;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 3rem;">Popular <span>Destinations</span></h2>
+        <div class="destinations-grid">
+            <div class="destination-card" style="background-image: url('https://images.unsplash.com/photo-1595841696660-558ffb737a4e?w=500&auto=format&fit=crop&q=60');">
+                <div class="destination-overlay">
+                    <h3 style="font-size: 1.25rem; font-weight: 700;">Madhapur (IT Hub)</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Top tech companies & corporate offices</p>
+                </div>
+            </div>
+            <div class="destination-card" style="background-image: url('https://images.unsplash.com/photo-1598285521098-b80c5cd8ff71?w=500&auto=format&fit=crop&q=60');">
+                <div class="destination-overlay">
+                    <h3 style="font-size: 1.25rem; font-weight: 700;">Gachibowli (Financial District)</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Modern residential complexes & tech parks</p>
+                </div>
+            </div>
+            <div class="destination-card" style="background-image: url('https://images.unsplash.com/photo-1572431441293-63d30fc401c7?w=500&auto=format&fit=crop&q=60');">
+                <div class="destination-overlay">
+                    <h3 style="font-size: 1.25rem; font-weight: 700;">Hyderabad Airport</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Quick international transfers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 5%; background: rgba(255, 255, 255, 0.02); border-top: 1px solid var(--border-color);">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 3rem;">Exclusive <span>Offers</span></h2>
+        <div class="offers-grid">
+            <div class="glass-container offer-card">
+                <span class="badge badge-success" style="margin-bottom: 1rem;">ACTIVE</span>
+                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">50% Off First Ride</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Use code <strong>NEW50</strong> on checkouts. Max discount ₹150.</p>
+                <div style="font-weight: 600; color: var(--primary);">Expires: 31st Dec 2026</div>
+            </div>
+            <div class="glass-container offer-card" style="border-left: 4px solid var(--primary);">
+                <span class="badge badge-success" style="margin-bottom: 1rem;">ACTIVE</span>
+                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">Weekend Getaway Special</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Get flat 20% off on all SUV and Sedan bookings on weekends.</p>
+                <div style="font-weight: 600; color: var(--primary);">Promo: WEEKEND20</div>
+            </div>
+            <div class="glass-container offer-card" style="border-left: 4px solid var(--secondary);">
+                <span class="badge badge-success" style="margin-bottom: 1rem;">ACTIVE</span>
+                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem;">UPI Cashback</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">Pay via UPI to receive guaranteed scratch card up to ₹50.</p>
+                <div style="font-weight: 600; color: var(--primary);">No coupon code required</div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 GoTaxi Platforms Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Taxi Booking Application - Tasks
+
+- [x] Set up virtual environment and install backend dependencies
+- [x] Initialize Django project and create backend configuration
+- [x] Create `.env` configuration file for secure MongoDB Atlas URL
+- [x] Implement `Backend/db.py` to connect to MongoDB Atlas using PyMongo
+- [x] Implement `Backend/views.py` containing 20 function-based CRUD views
+- [x] Implement `Backend/urls.py` mapping paths to views
+- [x] Write a script to seed initial sample data to MongoDB
+- [x] Create `Frontend/` folder and implement `style.css` (Premium dark/neon theme)
+- [x] Implement frontend screens:
+  - [x] `index.html` (Home)
+  - [x] `login.html` & `register.html`
+  - [x] `booking.html` (Booking)
+  - [x] `drivers.html` (Drivers list)
+  - [x] `payments.html` (Payment screen)
+  - [x] `ride_history.html` (Rides history)
+  - [x] `customer_dashboard.html` (Customer stats)
+  - [x] `driver_dashboard.html` (Driver console)
+  - [x] `admin_dashboard.html` (Admin CRUD center)
+- [x] Implement `Frontend/script.js` to coordinate Fetch API calls and UI rendering
+- [x] Verify functionality (Backend APIs, database, and end-to-end user workflows)

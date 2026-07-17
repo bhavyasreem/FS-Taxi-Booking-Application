@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi - Request Ride</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="main-nav"></nav>
+
+    <main style="max-width: 600px; margin: 4rem auto; padding: 0 1.5rem;">
+        <div class="glass-container">
+            <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 2rem; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Book Your Ride</h2>
+            
+            <div class="form-group">
+                <label class="form-label" for="pickup">Pickup Location</label>
+                <input type="text" id="pickup" class="form-control" placeholder="Enter starting point (e.g. Madhapur)" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="drop">Drop Location</label>
+                <input type="text" id="drop" class="form-control" placeholder="Enter destination (e.g. Gachibowli)" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="vehicle_type">Preferred Vehicle Category</label>
+                <select id="vehicle_type" class="form-control">
+                    <option value="Sedan">Sedan (Comfortable 4-seater)</option>
+                    <option value="Hatchback">Hatchback (Affordable 4-seater)</option>
+                    <option value="SUV">SUV (Spacious 6-seater)</option>
+                    <option value="Auto">Auto (Quick city travel)</option>
+                    <option value="Bike">Bike (Single passenger express)</option>
+                    <option value="Luxury">Luxury (Premium segment sedan)</option>
+                </select>
+            </div>
+
+            <button type="button" id="calc-fare-btn" class="btn btn-secondary" style="width: 100%; margin-top: 1rem; padding: 0.8rem;">
+                Estimate Ride Fare
+            </button>
+
+            <div id="fare-estimate-box" class="glass-container" style="display: none; margin-top: 2rem; border-color: var(--primary); text-align: center; background: rgba(99, 102, 241, 0.05);">
+                <span style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">ESTIMATED FARE</span>
+                <h3 id="fare-value" style="font-size: 3rem; font-weight: 800; color: var(--text-main); margin: 0.5rem 0;">₹0</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Inclusive of taxes and tolls. Dynamic pricing may vary based on traffic.</p>
+            </div>
+
+            <button type="button" id="book-ride-btn" class="btn btn-primary" style="display: none; width: 100%; margin-top: 1.5rem; padding: 0.9rem;">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Confirm Taxi Booking
+            </button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

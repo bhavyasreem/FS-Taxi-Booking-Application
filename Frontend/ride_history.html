@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi - Ride History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="main-nav"></nav>
+
+    <main style="max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 2rem;">Your <span>Ride History</span></h2>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Booking Date</th>
+                        <th>Driver Partner</th>
+                        <th>Travel Route</th>
+                        <th>Total Fare</th>
+                        <th>Ride Status</th>
+                        <th>Payment Status</th>
+                    </tr>
+                </thead>
+                <tbody id="history-tbody">
+                    <tr>
+                        <td colspan="7" style="text-align: center; color: var(--text-muted); padding: 2rem;">Fetching booking logs...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

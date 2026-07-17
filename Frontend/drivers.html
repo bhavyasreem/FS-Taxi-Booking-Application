@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi - Drivers Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="main-nav"></nav>
+
+    <main style="max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 2rem;">Our Professional <span>Drivers</span></h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Meet our trusted driver partners. All drivers are verified, highly rated, and drive fully maintained vehicles to ensure your safety and comfort.
+        </p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Driver ID</th>
+                        <th>Name</th>
+                        <th>Email Contact</th>
+                        <th>Vehicle Model & Category</th>
+                        <th>Vehicle Plate Number</th>
+                        <th>Driving Experience</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody id="drivers-directory-tbody">
+                    <!-- Loaded dynamically via script.js -->
+                    <tr>
+                        <td colspan="7" style="text-align: center; color: var(--text-muted); padding: 2rem;">Loading drivers data...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
