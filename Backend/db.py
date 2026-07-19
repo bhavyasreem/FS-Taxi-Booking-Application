@@ -8,7 +8,7 @@ load_dotenv(BASE_DIR / 'Backend' / '.env')
 
 mongo_uri = os.getenv("MONGO_URI")
 if not mongo_uri:
-    mongo_uri = "Your url..."
+    mongo_uri = "mongodb+srv://Doremon_12:RRobertR%408908@cluster0.zx7ka0h.mongodb.net/"
 
 client = MongoClient(mongo_uri)
 db = client['taxi_booking_db']
